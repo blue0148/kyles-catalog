@@ -1,0 +1,58 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Kyle's Catalog</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header>
+  <div class="wrap nav">
+    <div class="brand">Kyle's <span>Catalog</span></div>
+    <a href="#admin">Admin</a>
+  </div>
+</header>
+
+<main class="wrap">
+  <section class="hero">
+    <p class="eyebrow">PREORDER FOR TOMORROW</p>
+    <h1>Reserve what you want.</h1>
+    <p>Put your name down before the next day. Availability refreshes automatically every midnight.</p>
+  </section>
+
+  <section>
+    <div id="catalog" class="grid"></div>
+  </section>
+
+  <section class="order-panel">
+    <h2>Preorder</h2>
+    <p id="selectedText">Choose an item above.</p>
+    <form id="orderForm">
+      <input id="name" maxlength="100" placeholder="Your name" required>
+      <button type="submit">Add me to the list</button>
+    </form>
+    <div id="message"></div>
+  </section>
+
+  <section id="admin" class="admin">
+    <h2>Admin</h2>
+    <p>Catalog controls and tomorrow's preorder list.</p>
+    <div id="loginBox">
+      <input id="password" type="password" placeholder="Admin password">
+      <button id="login">Log in</button>
+    </div>
+    <div id="adminPanel" hidden>
+      <div class="admin-actions">
+        <button id="newItem">+ New catalog item</button>
+        <button id="reset" class="secondary">Reset availability now</button>
+      </div>
+      <div id="adminItems"></div>
+      <h3>Preorder list</h3>
+      <div id="orders"></div>
+    </div>
+  </section>
+</main>
+<script src="app.js"></script>
+</body>
+</html>
